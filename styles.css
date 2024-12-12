@@ -30,21 +30,6 @@
   color: #FABE0C; 
 }
 
-.slides1 h2{
-  white-space: nowrap; /* Verhindert Umbrüche */
-  overflow: hidden; /* Verhindert, dass der Text überläuft */
-  display: inline-block;
-  animation: typing-clip 4s 1s forwards;
-}
-
-@keyframes typing-clip {
-  from {
-    clip-path: inset(0 100% 0 0); /* Start: Text versteckt */
-  }
-  to {
-    clip-path: inset(0 0% 0 0); /* Ende: Text vollständig sichtbar */
-  }
-}
 .slides2{
   background: linear-gradient( #101e63,#af1eb4);
   font-family: cursive;
