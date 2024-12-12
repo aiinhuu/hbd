@@ -142,7 +142,7 @@ const material = new THREE.MeshStandardMaterial({
   color: 0xffff00,
 });
 const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+//scene.add(cube);
 
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
 scene.add(hemiLight);
