@@ -1,14 +1,31 @@
+/* Allgemeine Einstellungen */
 body {
   margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(to bottom, #ffafbd, #ffc3a0);
-  overflow: hidden;
-  font-family: 'Arial', sans-serif;
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
+.page1 {
+  background: linear-gradient(to bottom, #ffafbd, #ffc3a0);
+}
+
+.page2 {
+  background: #121212;
+  color: #fff;
+}
+
+/* Erste Seite */
 .birthday-container {
   text-align: center;
   position: relative;
@@ -25,24 +42,7 @@ body {
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
-
-@keyframes wobble {
-  0%, 100% {
-    transform: rotate(-2deg);
-  }
-  50% {
-    transform: rotate(2deg);
-  }
-}
-
+/* Animationen für Ballons und Text (erste Seite) bleiben gleich */
 .balloon {
   width: 40px;
   height: 60px;
@@ -95,4 +95,48 @@ body {
     transform: translateY(-400px) scale(1);
     opacity: 0;
   }
+}
+
+/* Zweite Seite */
+.dark-vibe-container {
+  text-align: center;
+}
+
+.dark-wishes {
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 0 4px 6px rgba(255, 0, 0, 0.6);
+  animation: pulse 2s infinite;
+}
+
+.dark-subtext {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #aaa;
+  animation: fade-in 2s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    color: #ff0000;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #e60073;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Scroll-Snap */
+html {
+  scroll-snap-type: y mandatory;
 }
