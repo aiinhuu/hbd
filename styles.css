@@ -8,6 +8,7 @@
 .container {
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
@@ -26,7 +27,7 @@
 .slides1{
   background: linear-gradient( #96A8FA,#101e63);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 100px;
+  font-size: 23vh;
   color: #FABE0C; 
 }
 
