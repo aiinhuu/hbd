@@ -1,91 +1,36 @@
-body {
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  overflow: hidden; /* Scrollen auf der Achse unterbinden */
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-.page {
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.slides {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 10px; /* Abstand bei kleineren Bildschirmen */
+  justify-content: center;
+  gap: 50px;
+  color: pink;
+  scroll-snap-align: start;
 }
 
-.page1 {
-  background: linear-gradient(to bottom, #ffafbd, #121212);
+.slides1{
+  background: linear-gradient( blue,green);
 }
 
-.page2 {
-  background: #121212;
-  color: #fff;
+.slides2{
+  background: linear-gradient( green,pink);
 }
 
-/* Pagination-Dots */
-.pagination {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 10;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.dot.active {
-  background: #ff6f61;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-@keyframes shimmer {
-  0% { background-position: 0%; }
-  100% { background-position: 100%; }
-}
-
-@keyframes wobble {
-  0%, 100% { transform: rotate(-5deg); }
-  50% { transform: rotate(5deg); }
-}
-
-/* Standard-Design für Desktop */
-.birthday-text {
-  font-size: 3rem;
-}
-
-.dark-wishes {
-  font-size: 5rem;
-}
-
-/* Anpassungen für Mobilgeräte */
-@media (max-width: 768px) {
-  .birthday-text {
-    font-size: 2rem; /* Kleinere Schriftgröße */
-  }
-
-  .dark-wishes {
-    font-size: 3rem; /* Kleinere Schriftgröße */
-  }
-
-  .pagination {
-    left: 5px; /* Punkte näher an den Rand setzen */
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-  }
+.slides3{
+  background: linear-gradient( pink,red);
 }
