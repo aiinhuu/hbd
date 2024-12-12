@@ -46,3 +46,40 @@ window.addEventListener('wheel', (e) => {
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => changePage(index));
 });
+
+let touchStartY = 0;
+let touchEndY = 0;
+
+// Touchstart-Ereignis speichern
+window.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+});
+
+// Touchend-Ereignis auswerten
+window.addEventListener('touchend', (e) => {
+    touchEndY = e.changedTouches[0].clientY;
+    handleTouchScroll();
+});
+
+// Funktion zum Wechsel der Seiten basierend auf Touch-Geste
+function handleTouchScroll() {
+    if (isScrolling) return;
+
+    isScrolling = true;
+
+    if (touchStartY > touchEndY) {
+        // Nach unten wischen
+        if (currentPage < pages.length - 1) {
+            changePage(currentPage + 1);
+        }
+    } else if (touchStartY < touchEndY) {
+        // Nach oben wischen
+        if (currentPage > 0) {
+            changePage(currentPage - 1);
+        }
+    }
+
+    setTimeout(() => {
+        isScrolling = false;
+    }, 800); // Zeit für Animation
+}

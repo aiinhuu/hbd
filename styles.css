@@ -5,11 +5,12 @@ body {
 }
 
 .page {
-  height: 100vh;
-  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 10px; /* Abstand bei kleineren Bildschirmen */
 }
 
 .page1 {
@@ -49,9 +50,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
-.birthday-text {
-  animation: shimmer 6s infinite, wobble 3s infinite ease-in-out; /* Verlangsamte Dauer */
-}
 
 @keyframes shimmer {
   0% { background-position: 0%; }
@@ -61,4 +59,33 @@ html {
 @keyframes wobble {
   0%, 100% { transform: rotate(-5deg); }
   50% { transform: rotate(5deg); }
+}
+
+/* Standard-Design für Desktop */
+.birthday-text {
+  font-size: 3rem;
+}
+
+.dark-wishes {
+  font-size: 5rem;
+}
+
+/* Anpassungen für Mobilgeräte */
+@media (max-width: 768px) {
+  .birthday-text {
+    font-size: 2rem; /* Kleinere Schriftgröße */
+  }
+
+  .dark-wishes {
+    font-size: 3rem; /* Kleinere Schriftgröße */
+  }
+
+  .pagination {
+    left: 5px; /* Punkte näher an den Rand setzen */
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
