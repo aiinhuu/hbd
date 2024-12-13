@@ -32,10 +32,21 @@
 }
 
 .slides2{
-  background: linear-gradient( #101e63,#af1eb4);
+  background: rgb(19, 19, 19);
   font-family: cursive;
   font-size: 100px;
+  overflow: hidden;
+  display: flex; /* Ermöglicht einfaches Zentrieren */
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center; /* Vertikal zentrieren */
+  position: relative; /* Positionierung für flexibles Layout */
+}
 
+.slides2 img {
+  width: 100%; /* Bild passt sich an die Breite des div an */
+  height: 100%; /* Bild passt sich an die Höhe des div an */
+  object-fit: contain; /* Schneidet das Bild so zu, dass es das div füllt */
+  display: block; /* Entfernt mögliche zusätzliche Abstände um das Bild */
 }
 
 .slides3{
