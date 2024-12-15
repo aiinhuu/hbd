@@ -14,41 +14,61 @@
 }
 
 .slides {
+  background: rgb(27, 27, 27);
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
-  color: pink;
   scroll-snap-align: start;
 }
 
 .slides1{
-  background: linear-gradient( #96A8FA,#101e63);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 15vh;
-  color: #FABE0C; 
-}
-
-.slides2{
-  background: rgb(19, 19, 19);
   font-family: cursive;
   font-size: 100px;
   overflow: hidden;
-  display: flex; /* Ermöglicht einfaches Zentrieren */
-  justify-content: center; /* Horizontal zentrieren */
-  align-items: center; /* Vertikal zentrieren */
-  position: relative; /* Positionierung für flexibles Layout */
+  display: flex; 
+  justify-content: center; 
+  position: relative; 
+}
+
+.slides1 img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
+  display: block; 
+}
+
+
+.slides2{
+  background: rgb(27, 27, 27);
+  font-family: cursive;
+  font-size: 100px;
+  overflow: hidden;
+  display: flex; 
+  justify-content: center; 
+  position: relative; 
 }
 
 .slides2 img {
-  width: 100%; /* Bild passt sich an die Breite des div an */
-  height: 100%; /* Bild passt sich an die Höhe des div an */
-  object-fit: contain; /* Schneidet das Bild so zu, dass es das div füllt */
-  display: block; /* Entfernt mögliche zusätzliche Abstände um das Bild */
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
+  display: block; 
 }
 
 .slides3{
-  background: linear-gradient( pink,red);
+  background: rgb(27, 27, 27);
+  overflow: hidden;
+  display: flex; 
+  justify-content: center; 
+  position: relative; 
+}
+
+.slides3 img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
+  display: block; 
 }
